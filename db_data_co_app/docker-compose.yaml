@@ -10,9 +10,19 @@ services:
       MYSQL_ROOT_PASSWORD: 4321
     ports:
       - "3308:3306"
+    deploy:
+      resources:
+        limits:
+          cpus: '0.2'
+          memory: '1G'
 
   adminer:
     image: adminer
     restart: always
     ports:
       - 5001:8080
+    deploy:
+      resources:
+        limits:
+          cpus: '0.2'
+          memory: '1G'
