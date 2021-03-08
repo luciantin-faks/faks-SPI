@@ -10,4 +10,4 @@ GRANT ALL PRIVILEGES ON *.* TO 'data'@'%';
 FLUSH PRIVILEGES;
 
 CREATE DATABASE IF NOT EXISTS data_co_schema;
-USE data_co_schema;
+-- USE data_co_schema;
