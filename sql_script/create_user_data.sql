@@ -1,6 +1,3 @@
-ALTER USER 'root'@'localhost' IDENTIFIED BY '1234';
-ALTER USER 'root'@'%' IDENTIFIED BY '1234';
-
 CREATE USER 'data'@'localhost' IDENTIFIED BY '1234';
 CREATE USER 'data'@'%' IDENTIFIED BY '1234';
 

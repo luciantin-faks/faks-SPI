@@ -1,0 +1,2 @@
+ALTER USER 'root'@'localhost' IDENTIFIED BY '1234';
+ALTER USER 'root'@'%' IDENTIFIED BY '1234';
