@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cfec80f4-4701-415c-9512-d42bc6283a07" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/../linux_socket_error.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/dim_tab.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/faks-SPI.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/faks-SPI.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/other.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/other.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/sqldialects.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/sqldialects.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Analiza.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../Analiza.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" afterPath="$PROJECT_DIR$/../README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../db_data_co/docker-compose.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../db_data_co/docker-compose.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../db_data_co/mySqlSetup/setup.py" beforeDir="false" afterPath="$PROJECT_DIR$/../db_data_co/mySqlSetup/setup.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../db_setup/DataHandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/../db_setup/DataHandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../db_setup/DbHandler.py" beforeDir="false" afterPath="$PROJECT_DIR$/../db_setup/DbHandler.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../dim_tab.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../dim_tab.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mysql_init_script.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/../mysql_init_script.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../mysql_init_script.py" beforeDir="false" afterPath="$PROJECT_DIR$/../mysql_init_script.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diag.gv" beforeDir="false" afterPath="$PROJECT_DIR$/diag.gv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diagr.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/diagr.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mySql_tst.old.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/mySql_tst.old.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sql_script/alter_root.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../sql_script/alter_root.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sql_script/create_user_data.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../sql_script/create_user_data.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../sql_script/tables_init.sql" beforeDir="false" afterPath="$PROJECT_DIR$/../sql_script/tables_init.sql" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="1qO6rkBMmoEuoOjz7qBJs7RvoU4" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cfec80f4-4701-415c-9512-d42bc6283a07" name="Default Changelist" comment="" />
+      <created>1616938489096</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1616938489096</updated>
+      <workItem from="1616938490170" duration="10000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

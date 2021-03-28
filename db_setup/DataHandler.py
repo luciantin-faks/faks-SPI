@@ -13,23 +13,24 @@ table_schema = {
     "table_customer_geo": ["customer_id", "customer_city", "customer_country", "customer_state", "customer_street", "customer_zipcode"],
     "table_customer": ["customer_id", "fname", "lname", "email", "passwd", "segment"],
     "table_product": ["product_id", "name", "category_id", "image", "product_price", "product_status"],
-    "table_shipping": ["order_item_id", "days_for_shipping_real", "days_for_shipping_scheduled", "shipping_date", "mode"],
+    "table_shipping": ["order_id", "days_for_shipping_real", "days_for_shipping_scheduled", "shipping_date", "mode"],
     "table_product_category": ["category_id", "category_name"],
-    "table_orders": ["order_id", "customer_id", "order_date", "type", "delivery_status", "late_delivery_risk", "order_item_total", "order_profit_per_order", "benefit_per_order", "department_id"],
+    "table_orders": ["order_id", "customer_id", "order_date", "type", "delivery_status", "late_delivery_risk", "order_profit_per_order", "benefit_per_order", "department_id"],
     "table_orders_geo": ["order_id", "city", "region", "state", "status"],
-    "table_order_item": ["order_item_id", "order_id", "product_id", "discount", "discount_rate", "item_price", "profit_ratio", "quantity", "sales"],
+    "table_order_item": ["order_item_id", "order_id", "product_id", "discount", "discount_rate", "item_price", "profit_ratio", "quantity", "sales", "order_item_total"],
     # "table_department": ["department_id", "department_name", "latitude", "longitude", "market"]
     "table_department": ["department_id", "department_name", "market"]
 }
+
 table_dtypes = {
     "table_customer_geo": [types.Integer(), types.VARCHAR(length=45), types.VARCHAR(length=45), types.VARCHAR(length=45), types.VARCHAR(length=45), types.VARCHAR(length=45)],
     "table_customer": [types.Integer(), types.VARCHAR(length=45), types.VARCHAR(length=45), types.VARCHAR(length=45), types.VARCHAR(length=45), types.VARCHAR(length=45)],
     "table_product": [types.Integer(), types.VARCHAR(length=45), types.Integer(), types.VARCHAR(length=254), types.Float(), types.VARCHAR(length=45)],
     "table_shipping": [types.Integer(), types.Integer(), types.Integer(), types.DateTime(), types.VARCHAR(length=45)],
     "table_product_category": [types.Integer(), types.VARCHAR(length=45)],
-    "table_orders": [types.Integer(), types.Integer(), types.DateTime(), types.VARCHAR(length=45), types.VARCHAR(length=45), types.Integer(), types.Float(), types.Float(), types.Float(), types.Integer()],
+    "table_orders": [types.Integer(), types.Integer(), types.DateTime(), types.VARCHAR(length=45), types.VARCHAR(length=45), types.Integer(), types.Float(), types.Float(), types.Integer()],
     "table_orders_geo": [types.Integer(), types.Unicode(length=45), types.Unicode(length=45), types.Unicode(length=45), types.VARCHAR(length=45)],
-    "table_order_item": [types.Integer(), types.Integer(), types.Integer(), types.Float(), types.Float(), types.Float(), types.Float(), types.Float(), types.Float()],
+    "table_order_item": [types.Integer(), types.Integer(), types.Integer(), types.Float(), types.Float(), types.Float(), types.Float(), types.Float(), types.Float(), types.Float()],
     # "table_department": [types.Integer(), types.VARCHAR(length=45), types.Float(precision='12,12'), types.Float(precision='12,12'), types.VARCHAR(length=45)]
     "table_department": [types.Integer(), types.VARCHAR(length=45), types.VARCHAR(length=45)]
 }
@@ -62,7 +63,7 @@ class Dataset:
         self.tables["table_orders"] = self.tables["table_orders"].groupby("order_id").first()
         self.tables["table_orders_geo"] = self.tables["table_orders_geo"].groupby("order_id").first()
 
-        self.tables["table_shipping"] = self.tables["table_shipping"].set_index("order_item_id")
+        self.tables["table_shipping"] = self.tables["table_shipping"].groupby("order_id").first()
         self.tables["table_product_category"] = self.tables["table_product_category"].drop_duplicates().set_index("category_id")
         self.tables["table_order_item"] = self.tables["table_order_item"].set_index("order_item_id")
 

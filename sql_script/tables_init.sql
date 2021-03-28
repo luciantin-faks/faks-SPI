@@ -54,7 +54,6 @@ CREATE TABLE orders (
     type VARCHAR(45) NOT NULL ,
     delivery_status VARCHAR(45) NOT NULL ,
     late_delivery_risk INT NOT NULL ,
-    order_item_total FLOAT NOT NULL ,
     order_profit_per_order FLOAT NOT NULL ,
     benefit_per_order FLOAT NOT NULL ,
     department_id INT NOT NULL ,
@@ -84,6 +83,7 @@ CREATE TABLE order_item (
     profit_ratio REAL NOT NULL ,
     quantity REAL NOT NULL ,
     sales REAL NOT NULL ,
+    order_item_total FLOAT NOT NULL ,
     UNIQUE INDEX order_item_id_UNIQUE (order_item_id ASC),
     CONSTRAINT order_id_order_item_fk FOREIGN KEY (order_id) REFERENCES data_co_schema.orders (order_id) ON DELETE CASCADE ON UPDATE CASCADE,
     CONSTRAINT product_id_order_item_fk FOREIGN KEY (product_id) REFERENCES data_co_schema.product (product_id) ON DELETE CASCADE ON UPDATE CASCADE
@@ -91,13 +91,13 @@ CREATE TABLE order_item (
 
 
 CREATE TABLE shipping (
-    order_item_id INT NOT NULL PRIMARY KEY,
+    order_id INT NOT NULL PRIMARY KEY,
     days_for_shipping_real INT NOT NULL ,
     days_for_shipping_scheduled INT NOT NULL ,
     shipping_date DATETIME NOT NULL ,
     mode VARCHAR(45) NOT NULL ,
-    UNIQUE INDEX order_item_id_UNIQUE (order_item_id ASC),
-    CONSTRAINT order_item_id_fk FOREIGN KEY (order_item_id) REFERENCES data_co_schema.order_item (order_item_id) ON DELETE CASCADE ON UPDATE CASCADE
+    UNIQUE INDEX order_id_shipping_UNIQUE (order_id ASC),
+    CONSTRAINT order_id_shipping__fk FOREIGN KEY (order_id) REFERENCES data_co_schema.orders (order_id) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
 
