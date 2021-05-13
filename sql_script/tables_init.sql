@@ -43,6 +43,8 @@ CREATE TABLE product (
 CREATE TABLE department (
     department_id INT NOT NULL PRIMARY KEY,
     department_name VARCHAR(45) NOT NULL ,
+    latitude DECIMAL(10,8) NOT NULL,
+    longitude DECIMAL(10,8) NOT NULL,
     market VARCHAR(45) NOT NULL ,
     UNIQUE INDEX department_id_UNIQUE (department_id ASC)
 );

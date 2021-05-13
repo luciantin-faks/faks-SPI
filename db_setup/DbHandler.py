@@ -19,6 +19,7 @@ class DbHandler:
         script = list(filter(lambda line: len(line) > 2 and line[0] != '-', script))
         script = list(map((lambda x: x.replace('\n', '')), script))
         script = list(filter(lambda line: len(line) > 2 and line[0] != '-', script))  # ??
+        # print(script)
 
         results = []
         for cmd in script:

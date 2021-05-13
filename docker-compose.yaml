@@ -1,0 +1,29 @@
+version: '3.7'
+# > sudo docker run --name mysql -d -p 3308:3306  -v "/run/mysqld":"/var/lib/mysql" -e MYSQL_ROOT_PASSWORD=4321  mysql/mysql-server
+services:
+
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: 4321
+    ports:
+      - "3308:3306"
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 5001:8080
+    deploy:
+      resources:
+        limits:
+          cpus: '0.2'
+          memory: '1G'
+
+  metabase:
+    image: metabase/metabase
+    restart: always
+    ports:
+      - 3000:3000

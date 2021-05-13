@@ -18,8 +18,8 @@ table_schema = {
     "table_orders": ["order_id", "customer_id", "order_date", "type", "delivery_status", "late_delivery_risk", "order_profit_per_order", "benefit_per_order", "department_id"],
     "table_orders_geo": ["order_id", "city", "region", "state", "status"],
     "table_order_item": ["order_item_id", "order_id", "product_id", "discount", "discount_rate", "item_price", "profit_ratio", "quantity", "sales", "order_item_total"],
-    # "table_department": ["department_id", "department_name", "latitude", "longitude", "market"]
-    "table_department": ["department_id", "department_name", "market"]
+    "table_department": ["department_id", "department_name", "latitude", "longitude", "market"]
+    # "table_department": ["department_id", "department_name", "market"]
 }
 
 table_dtypes = {
@@ -31,8 +31,8 @@ table_dtypes = {
     "table_orders": [types.Integer(), types.Integer(), types.DateTime(), types.VARCHAR(length=45), types.VARCHAR(length=45), types.Integer(), types.Float(), types.Float(), types.Integer()],
     "table_orders_geo": [types.Integer(), types.Unicode(length=45), types.Unicode(length=45), types.Unicode(length=45), types.VARCHAR(length=45)],
     "table_order_item": [types.Integer(), types.Integer(), types.Integer(), types.Float(), types.Float(), types.Float(), types.Float(), types.Float(), types.Float(), types.Float()],
-    # "table_department": [types.Integer(), types.VARCHAR(length=45), types.Float(precision='12,12'), types.Float(precision='12,12'), types.VARCHAR(length=45)]
-    "table_department": [types.Integer(), types.VARCHAR(length=45), types.VARCHAR(length=45)]
+    "table_department": [types.Integer(), types.VARCHAR(length=45), types.Float(precision='10,8'), types.Float(precision='10,8'), types.VARCHAR(length=45)]
+    # "table_department": [types.Integer(), types.VARCHAR(length=45), types.VARCHAR(length=45)]
 }
 
 #     latitude FLOAT(12,12) NOT NULL ,

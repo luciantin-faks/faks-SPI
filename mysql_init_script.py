@@ -15,12 +15,15 @@ root_engine = db_handler.create_engine(username="root", password="1234")
 
 # Create user "data" && tables
 
-
 script_file = open("./sql_script/create_user_data.sql", "rt")
 db_handler.run_script(engine=root_engine, script_file=script_file)
 
 
 data_engine = db_handler.create_engine(username="data", password="1234")
+
+script_file = open("./sql_script/tables_dim.sql", "rt")
+results = db_handler.run_script(engine=data_engine, script_file=script_file)
+print(results)
 
 
 script_file = open("./sql_script/tables_init.sql", "rt")
@@ -36,9 +39,7 @@ dataset_handler = DataHandler.Dataset(path=f'./data/DataCoSupplyChainDataset.csv
 tables, table_dtypes, table_insertion_order = dataset_handler.get_tables()
 
 
-
 # Fill tables
-
 
 # print(table_dtypes)
 

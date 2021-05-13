@@ -7,6 +7,7 @@ GRANT ALL PRIVILEGES ON *.* TO 'data'@'%';
 FLUSH PRIVILEGES;
 
 CREATE DATABASE IF NOT EXISTS data_co_schema;
+CREATE DATABASE IF NOT EXISTS data_co_schema_dim;
 -- USE data_co_schema;
 
 -- # DROP SCHEMA data_co_schema;
