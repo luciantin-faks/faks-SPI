@@ -48,4 +48,6 @@ for table_name in table_insertion_order:
     print(tables[table_name][:10])
     dtype = dict(zip([tables[table_name].index.name] + tables[table_name].columns.tolist(), table_dtypes[table_name]))
     db_handler.fill_table(df=tables[table_name], table_name=table_name[6:], engine=data_engine,
-                          schema="data_co_schema", dtypes=dtype);
+                          schema="data_co_schema", dtypes=dtype)
+
+

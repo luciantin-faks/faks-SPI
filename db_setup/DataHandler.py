@@ -35,10 +35,11 @@ table_dtypes = {
     # "table_department": [types.Integer(), types.VARCHAR(length=45), types.VARCHAR(length=45)]
 }
 
+table_insertion_order = ["table_customer", "table_customer_geo", "table_product_category", "table_product", "table_department", "table_orders", "table_orders_geo", "table_order_item", "table_shipping"]
+
+
 #     latitude FLOAT(12,12) NOT NULL ,
 #     longitude FLOAT(12,12) NOT NULL ,
-
-table_insertion_order = ["table_customer", "table_customer_geo", "table_product_category", "table_product", "table_department", "table_orders", "table_orders_geo", "table_order_item", "table_shipping"]
 
 
 class Dataset:
@@ -82,3 +83,5 @@ class Dataset:
 
     def change_date_format(self, df, col):
         return df[col].apply(lambda date: self.DD_MM_YYYY_to_YYYY_MM_DD(date + ":00"))
+
+

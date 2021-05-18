@@ -1,5 +1,4 @@
 version: '3.7'
-# > sudo docker run --name mysql -d -p 3308:3306  -v "/run/mysqld":"/var/lib/mysql" -e MYSQL_ROOT_PASSWORD=4321  mysql/mysql-server
 services:
 
   db:
@@ -23,7 +22,9 @@ services:
           memory: '1G'
 
   metabase:
-    image: metabase/metabase
+    image: luciantin/metabase_unlimited:latest
     restart: always
     ports:
       - 3000:3000
+
+
